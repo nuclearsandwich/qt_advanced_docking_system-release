@@ -1,0 +1,22 @@
+From 0b5c5c6070eef8f78a919f152f9b87e1decf8055 Mon Sep 17 00:00:00 2001
+From: Levi Armstrong <levi.armstrong@gmail.com>
+Date: Sun, 3 Apr 2022 17:12:20 -0500
+Subject: [PATCH] Added install rule for package.xml
+
+---
+ CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 72271a6..6f7b6f1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -41,3 +41,5 @@ if(BUILD_EXAMPLES)
+     add_subdirectory(demo)
+ endif()
+ 
++# Install catkin package.xml
++install(FILES package.xml DESTINATION share/qt_advanced_docking)
+-- 
+2.25.1
+
