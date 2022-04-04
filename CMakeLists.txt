@@ -41,5 +41,3 @@ if(BUILD_EXAMPLES)
     add_subdirectory(demo)
 endif()
 
-# Install catkin package.xml
-install(FILES package.xml DESTINATION share/qt_advanced_docking)
