@@ -1,0 +1,22 @@
+From 1ea07baa38c4c2b5d0c6f728660bb9c182cb9216 Mon Sep 17 00:00:00 2001
+From: Levi Armstrong <levi.armstrong@gmail.com>
+Date: Sun, 3 Apr 2022 17:22:18 -0500
+Subject: [PATCH 2/6] Rebase from 'upstream'
+
+---
+ CMakeLists.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6f7b6f1..72271a6 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -41,5 +41,3 @@ if(BUILD_EXAMPLES)
+     add_subdirectory(demo)
+ endif()
+ 
+-# Install catkin package.xml
+-install(FILES package.xml DESTINATION share/qt_advanced_docking)
+-- 
+2.25.1
+
