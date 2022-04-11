@@ -1,7 +1,7 @@
-From 77ca7a47dde9c0724ce1160251208496768c23c7 Mon Sep 17 00:00:00 2001
+From ef459e9c465a6dfc172b8e650dc8b5aa2b7caab7 Mon Sep 17 00:00:00 2001
 From: Levi Armstrong <levi.armstrong@gmail.com>
 Date: Sun, 3 Apr 2022 17:12:20 -0500
-Subject: [PATCH 5/6] Added install rule for package.xml
+Subject: [PATCH 5/7] Added install rule for package.xml
 
 ---
  CMakeLists.txt | 2 ++

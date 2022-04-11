@@ -1,7 +1,7 @@
-From 2671840edd40209ff9488c3ce330afffc375799f Mon Sep 17 00:00:00 2001
+From e7e5d85476d7861c5c234428c945abff50c9f7b5 Mon Sep 17 00:00:00 2001
 From: Levi Armstrong <levi.armstrong@gmail.com>
 Date: Thu, 7 Apr 2022 11:12:07 -0500
-Subject: [PATCH 6/6] Patch extracting version from tag
+Subject: [PATCH 6/7] Patch extracting version from tag
 
 ---
  CMakeLists.txt | 7 ++++---

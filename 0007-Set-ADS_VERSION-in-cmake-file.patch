@@ -1,0 +1,24 @@
+From a1f1f0549a8c076b6f21f574d8de61fc2737937e Mon Sep 17 00:00:00 2001
+From: Levi Armstrong <levi.armstrong@gmail.com>
+Date: Mon, 11 Apr 2022 00:15:10 -0500
+Subject: [PATCH 7/7] Set ADS_VERSION in cmake file
+
+---
+ CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d8bccaa..a3820c9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ cmake_minimum_required(VERSION 3.5)
+ 
++set(ADS_VERSION "3.8.2")
++
+ # By default, the version information is extracted from the git index. However,
+ # we can override this behavior by explicitly setting ADS_VERSION and
+ # skipping the git checks. This is useful for cases where this project is being
+-- 
+2.25.1
+
