@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
+set(ADS_VERSION "3.8.2")
+
 # By default, the version information is extracted from the git index. However,
 # we can override this behavior by explicitly setting ADS_VERSION and
 # skipping the git checks. This is useful for cases where this project is being
