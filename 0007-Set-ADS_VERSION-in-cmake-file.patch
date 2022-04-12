@@ -1,4 +1,4 @@
-From a1f1f0549a8c076b6f21f574d8de61fc2737937e Mon Sep 17 00:00:00 2001
+From 39c2007a8a305f7c9cfc693d5aa115f954b69511 Mon Sep 17 00:00:00 2001
 From: Levi Armstrong <levi.armstrong@gmail.com>
 Date: Mon, 11 Apr 2022 00:15:10 -0500
 Subject: [PATCH 7/7] Set ADS_VERSION in cmake file
