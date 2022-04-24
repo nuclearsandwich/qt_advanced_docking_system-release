@@ -11,7 +11,8 @@
   <license>LGPL 2.1</license>
   <buildtool_depend>cmake</buildtool_depend>
 
-  <depend>qtbase5-dev</depend>
+  <build_depend>qtbase5-private-dev</build_depend>
+  <build_depend>qtbase5-dev</build_depend>
   <depend>libqt5-core</depend>
   <depend>libqt5-widgets</depend>
   <depend>libqt5-gui</depend>
