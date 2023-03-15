@@ -1,0 +1,44 @@
+From 0117d969f7cd2ff685c9f41e7e3526bbd3f9a555 Mon Sep 17 00:00:00 2001
+From: Levi Armstrong <levi.armstrong@gmail.com>
+Date: Thu, 8 Sep 2022 09:34:21 -0500
+Subject: [PATCH] Add install package.xml and set ADS_VERSION
+
+---
+ CMakeLists.txt | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 72271a6..cc7508b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ cmake_minimum_required(VERSION 3.5)
+ 
++set(ADS_VERSION "3.8.2")
++
+ # By default, the version information is extracted from the git index. However,
+ # we can override this behavior by explicitly setting ADS_VERSION and
+ # skipping the git checks. This is useful for cases where this project is being
+@@ -8,9 +10,10 @@ if(NOT ADS_VERSION)
+     set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+     include(GetGitRevisionDescription)
+     git_describe(GitTagVersion --tags)
+-    string(REGEX REPLACE "^([0-9]+)\\..*" "\\1" VERSION_MAJOR "${GitTagVersion}")
+-    string(REGEX REPLACE "^[0-9]+\\.([0-9]+).*" "\\1" VERSION_MINOR "${GitTagVersion}")
+-    string(REGEX REPLACE "^[0-9]+\\.[0-9]+\\.([0-9]+).*" "\\1" VERSION_PATCH "${GitTagVersion}")
++    string(REGEX REPLACE "^.*([0-9]+\\.[0-9]+\\.[0-9]+).*" "\\1" VERSION_FULL "${GitTagVersion}")
++    string(REGEX REPLACE "^([0-9]+)\\..*" "\\1" VERSION_MAJOR "${VERSION_FULL}")
++    string(REGEX REPLACE "^[0-9]+\\.([0-9]+).*" "\\1" VERSION_MINOR "${VERSION_FULL}")
++    string(REGEX REPLACE "^[0-9]+\\.[0-9]+\\.([0-9]+).*" "\\1" VERSION_PATCH "${VERSION_FULL}")
+     set(VERSION_SHORT "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
+ else()
+     string(REGEX MATCHALL "[\.]" VERSION_DOT_MATCHES ${ADS_VERSION})
+@@ -41,3 +44,5 @@ if(BUILD_EXAMPLES)
+     add_subdirectory(demo)
+ endif()
+ 
+++# Install catkin package.xml
+++install(FILES package.xml DESTINATION share/qt_advanced_docking)
+-- 
+2.39.2
+
